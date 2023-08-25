@@ -1,3 +1,4 @@
+
 import {
   FlatList,
   StyleSheet,
@@ -31,35 +32,6 @@ const MyStatusBar = ({ backgroundColor, ...props }) => (
 const MyCart = ({ navigation }) => {
   const myCartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
-  const saveCartData = async (cartItems) => {
-    try {
-      const jsonValue = JSON.stringify(cartItems);
-      await AsyncStorage.setItem("cartItems", jsonValue);
-    } catch (error) {
-      console.log("Error saving cart data:", error);
-    }
-  };
-
-  const loadCartData = async () => {
-    try {
-      const jsonValue = await AsyncStorage.getItem("cartItems");
-      return jsonValue != null ? JSON.parse(jsonValue) : [];
-    } catch (error) {
-      console.log("Error loading cart data:", error);
-      return [];
-    }
-  };
-
-  const [myCartItemStored, setMyCartItemStored] = useState([]);
-
-  useEffect(() => {
-    loadCartData().then((data) => setMyCartItemStored(data));
-  }, []);
-
-  useEffect(() => {
-    saveCartData(myCartItemStored);
-  }, [myCartItemStored]);
 
   console.log("fsfg", myCartItems);
 
