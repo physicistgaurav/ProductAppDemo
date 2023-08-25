@@ -141,7 +141,9 @@ const MyProducts = ({ navigation }) => {
                   style={styles.productImage}
                 />
                 <View style={styles.detailText}>
-                  <Text style={styles.productName}>{item.title}</Text>
+                  <View style={{ flexDirection: "row" }}>
+                    <Text style={styles.productName}>{item.title}</Text>
+                  </View>
                   <Text style={styles.productBrand}>{item.category}</Text>
                   <Text style={styles.productPrice}>{"रु " + item.price}</Text>
                   <View style={styles.buttonView}>
@@ -251,6 +253,10 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#134b5f",
     paddingTop: 10,
+    flexWrap: "wrap",
+    flexGrow: 1,
+    flexShrink: 1,
+    flex: 1,
   },
   productBrand: {
     fontSize: 16,
@@ -265,6 +271,7 @@ const styles = StyleSheet.create({
   },
   detailText: {
     padding: 10,
+    flex: 1,
   },
   buttonView: {
     flexDirection: "row",
