@@ -15,3 +15,6 @@ This is Cart Page section , where the products that are added are seen. Also, To
 
 Searching Funtionality demonstrated
 ![](/src/images/shop3.jpg)
+
+Error from API demonstrated
+![](/src/images/shop4.jpg)
