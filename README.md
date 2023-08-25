@@ -1,5 +1,9 @@
 # ProductAppDemo
 
+This is an expo-managed project with npm as package installer.
+
+Use npm install to install the package
+and use npx expo start to run the project
 
 Demo Project to illustrate redux and cart management system in React Native
 
